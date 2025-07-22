@@ -1,160 +1,192 @@
-const portfolio = {
-  settings: {
-    isSplash: false,
-  },
-  greeting: {
-    title: "Arunkumar P U",
-    logo_name: "ArunkumarPU",
-    subTitle:
-      "Automation Specialist | Scripting for Endpoint Excellence | Infrastructure Engineering Expertise",
-    resumeLink: "",
-    portfolio_repository: "https://github.com/arunkumar-pu/developerFolio",
-    githubProfile: "https://github.com/arunkumar-pu",
-  },
-  socialMediaLinks: [
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/arunkumarpu/",
-      fontAwesomeIcon: "fa-linkedin",
-      backgroundColor: "#0077B5",
-    },
-    {
-      name: "GitHub",
-      link: "https://github.com/arunkumar-pu",
-      fontAwesomeIcon: "fa-github",
-      backgroundColor: "#181717",
-    },
-    {
-      name: "Email",
-      link: "mailto:arunkumarpu@gmail.com",
-      fontAwesomeIcon: "fa-envelope",
-      backgroundColor: "#D14836",
-    },
-  ],
-  skills: {
-    data: [
-      {
-        title: "Automation & Scripting",
-        fileName: "FullStackImg",
-        skills: [
-          "⚡ Automating EUC operations using PowerShell and Bash",
-          "⚡ API-driven integrations with third-party platforms",
-          "⚡ Building scalable scripts for infrastructure ops"
-        ],
-        softwareSkills: [
-          { skillName: "PowerShell", fontAwesomeClassname: "logos:powershell" },
-          { skillName: "Python", fontAwesomeClassname: "logos:python" },
-          { skillName: "Bash", fontAwesomeClassname: "logos:bash-icon" },
-          { skillName: "APIs", fontAwesomeClassname: "mdi:api" },
-        ],
-      },
-      {
-        title: "Infrastructure Engineering",
-        fileName: "CloudInfraImg",
-        skills: [
-          "⚡ Managing Microsoft Servers and Active Directory",
-          "⚡ Virtualization using VMware (ESXi 5.5–7.0)",
-          "⚡ Maintaining DNS, DHCP, File Servers and Certificates"
-        ],
-        softwareSkills: [
-          { skillName: "VMware", fontAwesomeClassname: "simple-icons:vmware" },
-          { skillName: "Windows Server", fontAwesomeClassname: "logos:microsoft-windows" },
-          { skillName: "Active Directory", fontAwesomeClassname: "mdi:domain" },
-          { skillName: "Intune", fontAwesomeClassname: "simple-icons:microsoft" },
-        ],
-      },
-    ],
-  },
-  education: { visible: false },
-  certifications: {
-    visible: true,
-    certifications: [
-      {
-        title: "Windows PowerShell: Tool Building",
-        subtitle: "Microsoft",
-        logo_path: "microsoft_logo.png",
-        certificate_link: "",
-        alt_name: "PowerShell",
-        color_code: "#2A73CC",
-      },
-      {
-        title: "Certified Nexthink Administrator",
-        subtitle: "Nexthink",
-        logo_path: "nexthink_logo.png",
-        certificate_link: "",
-        alt_name: "Nexthink",
-        color_code: "#f47f24",
-      },
-    ],
-  },
-  experience: {
-    title: "Experience",
-    subtitle: "Work",
-    description:
-      "Driven by automation. I’ve streamlined infrastructure tasks, reduced manual intervention, and made systems smarter.",
-    header_image_path: "experience.svg",
-    sections: [
-      {
-        title: "Professional Service Engineer",
-        company: "Nexthink",
-        logo_path: "nexthink_logo.png",
-        duration: "Present",
-        location: "India",
-        description: [
-          "Developed and tested automation scripts with PowerShell and Bash",
-          "Integrated third-party systems using REST APIs",
-          "Designed scalable workflows for EUC automation",
-          "Refactored legacy scripts for better performance",
-          "Exploring AI-based automation enhancements"
-        ],
-        color: "#f47f24",
-      },
-      {
-        title: "IT Operations Analyst",
-        company: "Conduent",
-        logo_path: "conduent_logo.png",
-        duration: "Past",
-        location: "India",
-        description: [
-          "Resolved P1/P2 issues in Windows Server & VMware environments",
-          "Managed AD, DNS, DHCP and SSL Certificates",
-          "Automated infra monitoring using PowerShell and Shell scripts",
-          "Supported multiple clients using ITIL workflows via ServiceNow"
-        ],
-        color: "#000000",
-      },
-    ],
-  },
-  projects: {
-    data: [
-      {
-        id: "active-directory-tool",
-        name: "AD Admin Tool",
-        url: "https://github.com/arunkumar-pu/Ad_Administration_PS_Tool",
-        description:
-          "A PowerShell-based tool for streamlined Active Directory user and group management tasks.",
-        languages: [
-          {
-            name: "PowerShell",
-            iconifyClass: "logos:powershell",
-          },
-        ],
-  },
-    ],
-  },
-  contactPageData: {
-    contactSection: {
-      title: "Contact Me",
-      subtitle:
-        "Want to automate your infra or discuss scripting? Drop a message!",
-      number: "",
-      email_address: "arunkumarpu@gmail.com",
-    },
-    addressSection: {
-      title: "Location",
-      subtitle: "India",
-    },
-  },
+/* Personalized Portfolio Config for Arunkumar P U */
+
+import emoji from "react-easy-emoji";
+import splashAnimation from "./assets/lottie/splashAnimation";
+
+const splashScreen = {
+  enabled: true,
+  animation: splashAnimation,
+  duration: 2000
 };
 
-export default portfolio;
+const illustration = {
+  animated: true
+};
+
+const greeting = {
+  username: "Arunkumar P U",
+  title: "Hey, I'm Arunkumar",
+  subTitle: emoji(
+    "Automation Specialist ⚙️ | Scripting for Endpoint Excellence 💻 | Infrastructure Engineering Expertise 🚀"
+  ),
+  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
+  displayGreeting: true
+};
+
+const socialMediaLinks = {
+  github: "https://github.com/arunkumar-pu",
+  linkedin: "https://www.linkedin.com/in/arunkumarpu/",
+  gmail: "arunkumarpu@gmail.com",
+  display: true
+};
+
+const skillsSection = {
+  title: "What I do",
+  subTitle: "INFRASTRUCTURE AUTOMATION ENTHUSIAST WHO POWERS UP IT WITH SCRIPTING",
+  skills: [
+    emoji("⚡ Automate infrastructure and endpoint workflows using PowerShell, Bash, and APIs"),
+    emoji("⚡ Streamline Intune, AD, and server ops with custom automation tools"),
+    emoji("⚡ Integrate systems with APIs for seamless operations and reduced manual work")
+  ],
+  softwareSkills: [
+    { skillName: "PowerShell", fontAwesomeClassname: "fas fa-terminal" },
+    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
+    { skillName: "Bash", fontAwesomeClassname: "fas fa-code" },
+    { skillName: "API Integration", fontAwesomeClassname: "fas fa-plug" },
+    { skillName: "VMware", fontAwesomeClassname: "fas fa-server" },
+    { skillName: "Active Directory", fontAwesomeClassname: "fas fa-users" },
+    { skillName: "Microsoft Intune", fontAwesomeClassname: "fab fa-microsoft" }
+  ],
+  display: true
+};
+
+const educationInfo = {
+  display: false,
+  schools: []
+};
+
+const techStack = {
+  viewSkillBars: true,
+  experience: [
+    { Stack: "Automation/Scripting", progressPercentage: "90%" },
+    { Stack: "Infrastructure Ops", progressPercentage: "80%" },
+    { Stack: "Endpoint Management", progressPercentage: "75%" }
+  ],
+  displayCodersrank: false
+};
+
+const workExperiences = {
+  display: true,
+  experience: [
+    {
+      role: "Professional Service Engineer",
+      company: "Nexthink",
+      companylogo: require("./assets/images/defaultLogo.png"),
+      date: "Present",
+      desc: "Automation scripts using PowerShell and Bash for production environments. Integrated systems via APIs. Streamlined workflows and optimized legacy scripts. Documented solutions for long-term maintainability. Exploring AI for intelligent automation."
+    },
+    {
+      role: "IT Operations Analyst",
+      company: "Conduent",
+      companylogo: require("./assets/images/defaultLogo.png"),
+      date: "Previous",
+      desc: "Handled P1/P2 incidents, root cause analysis, and infrastructure automation using PowerShell. Administered Windows Server, VMware, and AD. Automated audits and infrastructure tasks with Shell and PowerShell."
+    }
+  ]
+};
+
+const openSource = {
+  showGithubProfile: "true",
+  display: true
+};
+
+const bigProjects = {
+  title: "Projects",
+  subtitle: "Here’s some of my automation work",
+  projects: [
+    {
+      image: require("./assets/images/defaultProject.png"),
+      projectName: "AD Administration Tool",
+      projectDesc: "Custom PowerShell GUI tool to manage Active Directory tasks",
+      footerLink: [
+        { name: "GitHub Repo", url: "https://github.com/arunkumar-pu/Ad_Administration_PS_Tool" }
+      ]
+    }
+  ],
+  display: true
+};
+
+const achievementSection = {
+  title: emoji("Certifications 🏆"),
+  subtitle: "Recognized credentials in scripting and automation",
+  achievementsCards: [
+    {
+      title: "Windows PowerShell: Tool Building",
+      subtitle: "Certified by Microsoft",
+      image: require("./assets/images/defaultCert.png"),
+      imageAlt: "Microsoft Logo",
+      footerLink: []
+    },
+    {
+      title: "Certified Nexthink Administrator",
+      subtitle: "Issued by Nexthink",
+      image: require("./assets/images/defaultCert.png"),
+      imageAlt: "Nexthink Logo",
+      footerLink: []
+    }
+  ],
+  display: true
+};
+
+const blogSection = {
+  title: "Blogs",
+  subtitle: "I’ll be writing about automation and scripting soon. Stay tuned.",
+  displayMediumBlogs: "false",
+  blogs: [],
+  display: false
+};
+
+const talkSection = {
+  title: "Talks",
+  subtitle: "Always open to share knowledge and insights.",
+  talks: [],
+  display: false
+};
+
+const podcastSection = {
+  title: emoji("Podcast 🎙️"),
+  subtitle: "Coming soon.",
+  podcast: [],
+  display: false
+};
+
+const resumeSection = {
+  title: "Resume",
+  subtitle: "Download my resume for more info",
+  display: true
+};
+
+const contactInfo = {
+  title: emoji("Contact Me ☎️"),
+  subtitle: "Reach out for collaboration or discussion.",
+  number: "",
+  email_address: "arunkumarpu@gmail.com"
+};
+
+const twitterDetails = {
+  userName: "",
+  display: false
+};
+
+const isHireable = true;
+
+export {
+  illustration,
+  greeting,
+  socialMediaLinks,
+  splashScreen,
+  skillsSection,
+  educationInfo,
+  techStack,
+  workExperiences,
+  openSource,
+  bigProjects,
+  achievementSection,
+  blogSection,
+  talkSection,
+  podcastSection,
+  contactInfo,
+  twitterDetails,
+  isHireable,
+  resumeSection
+};
